@@ -1,0 +1,21 @@
+body { font-family: Arial, sans-serif; 
+    text-align: center; margin-top: 30px;
+    background-image: url("img\ fundo.png");
+
+
+
+ } .cracha { margin-top: 20px; padding: 20px;
+     border: 2px solid #333; 
+     display: inline-block;
+
+
+      border-radius: 10px; width: 250px;
+     } img { width: 100%; height: auto;
+         border-radius: 10px; }
+
+.card {
+  background: rgba(10, 20, 60, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+}

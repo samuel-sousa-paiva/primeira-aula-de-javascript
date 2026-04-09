@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CAMISETAS SMK</title>
+  </head>
+  <body>
+    <h2>LOJA DE CAMISETAS SMK</h2>
+<button onclick="adicionarItem('Camisa Real Madrid', 399)">Camisa Real Madrid R$ 399</button>
+<button onclick="adicionarItem('Camisa Barcelona', 379)">Camisa Barcelona R$ 379</button>
+<button onclick="adicionarItem('Camisa Manchester City', 359)">Camisa Manchester City R$ 359</button>
+<button onclick="adicionarItem('Camisa Liverpool', 349)">Camisa Liverpool R$ 349</button>
+<button onclick="adicionarItem('Camisa PSG', 399)">Camisa PSG R$ 399</button>
+<button onclick="adicionarItem('Camisa Bayern de Munique', 369)">Camisa Bayern de Munique R$ 369</button>
+<button onclick="adicionarItem('Camisa Seleção Brasil', 349)">Camisa Brasil R$ 349</button>
+ 
+    <pre id="lista-carrinho"></pre>
+    <b id="total">Total: R$ 0,00</b>
+
+    <div id="resultado" class="resultado"></div>
+
+    <script>
+      var carrinho = [];
+      function adicionarItem(nome, preco) {
+        carrinho.push({ nome: nome, preco: preco });
+        atualizarCarrinho();
+      }
+      function atualizarCarrinho() {
+        var total = 0;
+        var lista = "";
+        for (var i = 0; i < carrinho.length; i++) {
+            total += carrinho[i].preco;
+        lista += carrinho[i].nome + " - R$ " 
+        + carrinho[i].preco.toFixed(2) + "\n";
+        }
+        document.getElementById("lista-carrinho").innerText = lista;
+        document.getElementById("total").innerText =
+          "Total: R$ " + total.toFixed(2);
+      }
+    </script>
+  </body>
+</html>

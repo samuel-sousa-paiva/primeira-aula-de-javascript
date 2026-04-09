@@ -1,0 +1,60 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fundo */
+body {
+     background-image: url('futebol\ img.png');
+  background-color: #f4f4f4;
+  color: #222;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Título */
+h2 {
+  margin-bottom: 20px;
+  color: #b3ff00; /* verde mais forte */
+  font-weight: bold;
+}
+
+/* Botões */
+button {
+  background-color: #0b6623;
+  border: none;
+  color: #ffffff;
+  padding: 12px 18px;
+  margin: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover */
+button:hover {
+  background-color: #145a32;
+}
+
+/* Carrinho */
+#lista-carrinho {
+  background-color: #67c50e;
+  border: 2px solid #0b6623;
+  padding: 12px;
+  margin: 20px auto;
+  width: 260px;
+  border-radius: 5px;
+  text-align: left;
+  min-height: 100px;
+}
+
+/* Total */
+#total {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #d9ff00;
+  font-weight: bold;
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>HAMBURGUERIA CARRINHO DE COMPRAS</title>
+  </head>
+  <body>
+    <h2>Hamburgueria: carrinho de compras</h2>
+
+    <button onclick="adicionarItem('X-burguer', 20)">X-burguer R$ 20</button>
+    <button onclick="adicionarItem('X-salada', 15)">X-salada R$ 15</button>
+    <button onclick="adicionarItem('X-bacon', 18)">X-bacon R$ 18</button>
+    <button onclick="adicionarItem('Batata frita', 18)">
+      Batata frita R$ 18
+    </button>
+    <button onclick="adicionarItem('Refrigerante', 8)">
+      Refrigerante R$ 6-8
+    </button>
+
+    <pre id="lista-carrinho"></pre>
+    <b id="total">Total: R$ 0,00</b>
+
+    <div id="resultado" class="resultado"></div>
+
+    <script>
+      var carrinho = [];
+      function adicionarItem(nome, preco) {
+        carrinho.push({ nome: nome, preco: preco });
+        atualizarCarrinho();
+      }
+      function atualizarCarrinho() {
+        var total = 0;
+        var lista = "";
+        for (var i = 0; i < carrinho.length; i++) {
+            total += carrinho[i].preco;
+        lista += carrinho[i].nome + " - R$ " 
+        + carrinho[i].preco.toFixed(2) + "\n";
+        }
+        document.getElementById("lista-carrinho").innerText = lista;
+        document.getElementById("total").innerText =
+          "Total: R$ " + total.toFixed(2);
+      }
+    </script>
+  </body>
+</html>

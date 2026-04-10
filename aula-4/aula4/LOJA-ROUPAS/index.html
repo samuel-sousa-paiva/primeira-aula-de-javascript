@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOJA DE ROUPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <h1>Loja de roupas: galeria</h1>
+        <p class="description">Loja basica,apenas para escolha de produtos</p>
+
+        <div class="product-grid">
+            <button type="button" class="product-button" onclick="mostrarModal('Camiseta', 'R$ 49,90', 'imagens/camiseta.png')">
+                <img src="imagens/camiseta.png" alt="Camiseta">
+                <span>Camiseta</span>
+            </button>
+
+            <button type="button" class="product-button" onclick="mostrarModal('Calça', 'R$ 50,00', 'imagens/img calca.png')">
+                <img src="imagens/img calca.png" alt="Calça">
+                <span>Calça</span>
+            </button>
+
+            <button type="button" class="product-button" onclick="mostrarModal('Boné', 'R$ 29,90', 'imagens/Bon%C3%A9%20cl%C3%A1ssico%20com%20patch%20de%20couro.png')">
+                <img src="imagens/Boné clássico com patch de couro.png" alt="Boné">
+                <span>Boné</span>
+            </button>
+
+            <button type="button" class="product-button" onclick="mostrarModal('Tênis', 'R$ 120,00', 'imagens/T%C3%AAnis%20esportivos%20modernos%20em%20fundo%20branco.png')">
+                <img src="imagens/Tênis esportivos modernos em fundo branco.png" alt="Tênis">
+                <span>Tênis</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <div class="modal-card">
+            <h3 id="modal-titulo"></h3>
+            <img id="modal-imagem" src="" alt="Imagem do produto">
+            <p id="modal-preco"></p>
+            <button type="button" class="close-button" onclick="fecharModal()">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        function mostrarModal(titulo, preco, imagem) {
+            document.getElementById('modal-titulo').innerText = titulo;
+            document.getElementById('modal-preco').innerText = preco;
+            document.getElementById('modal-imagem').src = imagem;
+            document.getElementById('modal').classList.add('open');
+        }
+
+        function fecharModal() {
+            document.getElementById('modal').classList.remove('open');
+        }
+
+        document.getElementById('modal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                fecharModal();
+            }
+        });
+    </script>
+</body>
+</html>

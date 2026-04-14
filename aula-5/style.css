@@ -1,0 +1,30 @@
+body{
+     background-image: url('Image_fx\ \(2\).png');
+}
+h1{
+    color: #38BDF8;
+}
+button{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+
+}
+h1 {
+    text-align: center;
+}
+input{
+    tex-align: center;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+input{
+    color: aqua;
+}

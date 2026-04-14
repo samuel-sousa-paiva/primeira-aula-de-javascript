@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desconto especial</title>
+  </head>
+  <body>
+    <h1>Desconto especial</h1>
+    <label>Valor da compra: </label>
+     <input type="number" id="valordaCompra" placeholder="digite o valordaCompra"
+     
+     <p id="resultadoDesconto"></p>
+      <button onclick="calcularDesconto()">calcular Desconto</button>
+     <script> 
+        function calcularDesconto(){
+            let valor = parseFloat(document.getElementById)("valorCompra").value;
+            let display = document.getElementById("resultadoDesconto");  
+            if(valor > 200)
+            let desconto = valor * 0.10;  
+        display.innerHTML = 
+        `descoto de 10% (R$ {desconto.toFixed(2)})<br>Total a pagar: R$ ${total;toFixed(2)}`;
+        }
+        else{
+            display.innerHTML=`total a pagar: R$ ${valor.toFixed(2)}(sem desconto)`;
+        }
+    }
+
+     </script>
+   
+    
+
+  </body>
+</html>
